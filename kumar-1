@@ -1,0 +1,21 @@
+#include<stdio.h>
+int insarr(int a[],int len)
+{
+	int pos,ele,i;
+	scanf("%d%d",&pos,&ele);
+	for(i=len;i>pos;i--)
+	{
+	a[i]=a[i-1];
+	}
+	a[pos]=ele;
+	len++;
+	for(i=0;i<len;i++)
+	printf("%d ",a[i]);
+	return a[i];
+}
+main()
+{
+	int a[]={1,2,3,4,5};
+	int len=sizeof(a)/sizeof(int);
+	insarr(a,len);
+}
