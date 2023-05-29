@@ -1,0 +1,17 @@
+#include<stdio.h>
+int delarr(int a[],int len)
+{
+	int pos,i;
+	scanf("%d",&pos);
+	for(i=pos;i<len;i++)
+	a[i]=a[i+1];
+	len--;
+	for(i=0;i<len;i++)
+	printf("%d ",a[i]);
+}
+main()
+{
+	int a[]={1,2,3,4,5};
+	int len=sizeof(a)/sizeof(int);
+	delarr(a,len);
+}
